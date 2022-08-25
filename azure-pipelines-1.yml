@@ -12,6 +12,9 @@ trigger:
    exclude:
      - feature/p*
      - refs/tags/test*
+ tags:
+   include:
+     - v1.1*
 
 
 pool:
