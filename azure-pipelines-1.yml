@@ -32,3 +32,13 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- bash: |
+    az boards work-item create \
+    --title "Build $(build.buildNumber) succeeded" \
+    --type feature \
+    --org $(System.TeamFoundationCollectionUri) \
+    --project $(System.TeamProject)
+  env:
+    AZURE_DEVOPS_EXT_PAT: $(ACCESSTOKEN)
+  displayName: 'Create work item on success'
