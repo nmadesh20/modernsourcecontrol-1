@@ -3,13 +3,13 @@
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
-schedules:
-  - cron: "*/5 * * * *"
-    displayName: run every 5 minutes
-    branches:
-      include:
-      - main
-      - release/*
+#schedules:
+#  - cron: "*/5 * * * *"
+#    displayName: run every 5 minutes
+#    branches:
+#      include:
+#      - main
+#      - release/*
       
 trigger:
  branches:
