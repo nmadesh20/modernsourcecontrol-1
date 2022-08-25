@@ -8,8 +8,10 @@ trigger:
    include:
      - main
      - feature/*
+     - refs/tags/release*
    exclude:
      - feature/p*
+     - refs/tags/test*
 
 
 pool:
